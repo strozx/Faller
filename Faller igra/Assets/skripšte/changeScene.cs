@@ -21,12 +21,17 @@ public class changeScene : MonoBehaviour
 
     }
 
+    public GameObject BallPrefab;
     public void replay(bool vrednsot)
     {
         UIr.SetActiveRecursively(false);
- 
-        
+        death.smrt = false;
+        gen gen = gameObject.GetComponent<gen>();
 
+        int down = -100;
+        Instantiate(BallPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+        GetComponent<Rigidbody2D>().AddForce(new Vector2(0, down));
+        gen.Start();
 
     }
 

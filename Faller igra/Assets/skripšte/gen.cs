@@ -4,7 +4,7 @@ using System.Collections;
 public class gen : MonoBehaviour {
 
 	// Use this for initialization
-	void Start () {
+public	void Start () {
 		for (int i = 0; i < 30; i++) {
 			for (s=0; s < 2; s++) {
 				spawn ();
@@ -35,6 +35,15 @@ public class gen : MonoBehaviour {
 			Destroy(this.gameObject);
 						}
 }
+
+
+    //public Transform meja;
+
+    //public void pozicijaGen()
+    //{
+
+
+    //}
 }
 
 
