@@ -4,28 +4,30 @@ using System.Collections;
 public class gen : MonoBehaviour {
 
 	// Use this for initialization
-public	void Start () {
- 
+	void Start () {
+		
 	}
-public void zacetek()
-{
-    st = meja.position.y;
-    for (int i = 0; i < 30; i++)
-    {
-        for (s = 0; s < 2; s++)
-        {
-            spawn();
-        }
-        st--;
-    }
 
-}
-    
+
+    public void zacetek()
+    {
+        st = platform.transform.position.y;
+        for (int i = 0; i < 30; i++)
+        {
+            for (s = 0; s < 2; s++)
+            {
+                spawn();
+            }
+            st--;
+        }
+
+    }
+    public GameObject platform;
 	float st=0;
 	int s = 0;
 	public void spawn()
-	{
-    
+	{				
+
 			Vector3 pos = transform.position;
 			Vector3 pos2 = transform.position;
 			float screenRatio = (float)Screen.width / (float)Screen.height;
@@ -44,11 +46,6 @@ public void zacetek()
 			Destroy(this.gameObject);
 						}
 }
-
-
-    public Transform meja;
-
- 
 }
 
 
