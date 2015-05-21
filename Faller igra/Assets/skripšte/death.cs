@@ -17,11 +17,12 @@ public class death : MonoBehaviour {
 	{
 		smrt = true;
 		Destroy (this.gameObject);
+
         replayCan.SetActiveRecursively(true);
 	}
     void Update()
     {
-        
+      
 
         if (hs1 > score.hs)
         {
