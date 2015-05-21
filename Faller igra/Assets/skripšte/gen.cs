@@ -5,18 +5,27 @@ public class gen : MonoBehaviour {
 
 	// Use this for initialization
 public	void Start () {
-		for (int i = 0; i < 30; i++) {
-			for (s=0; s < 2; s++) {
-				spawn ();
-			}
-			st--;
-			}
+ 
 	}
-	int st=-20;
+public void zacetek()
+{
+    st = meja.position.y;
+    for (int i = 0; i < 30; i++)
+    {
+        for (s = 0; s < 2; s++)
+        {
+            spawn();
+        }
+        st--;
+    }
+
+}
+    
+	float st=0;
 	int s = 0;
 	public void spawn()
-	{				
-
+	{
+    
 			Vector3 pos = transform.position;
 			Vector3 pos2 = transform.position;
 			float screenRatio = (float)Screen.width / (float)Screen.height;
@@ -37,13 +46,9 @@ public	void Start () {
 }
 
 
-    //public Transform meja;
+    public Transform meja;
 
-    //public void pozicijaGen()
-    //{
-
-
-    //}
+ 
 }
 
 
