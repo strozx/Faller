@@ -2,9 +2,11 @@ using UnityEngine;
 using System.Collections;
 
 public class PlayerM : MonoBehaviour {
-	public float down=0f;
+	public static float down=-50f;
 	public GameObject gumb;
 	public GameObject slika;
+    public GameObject canvas;
+    public static bool truecan = false;
 	// Use this for initialization
 	void Start () {
 		GetComponent<Rigidbody2D>().AddForce (new Vector2 (0, down));
@@ -14,15 +16,23 @@ public class PlayerM : MonoBehaviour {
 	}
 	//float velocity=0;
 	float shipBoundaryRadius = 0.301f;
-	public float moveSpeed = 0;
+
 	public Transform target;
 	// Update is called once per frame
 	void Update()
 	{
-
+       
 		}
 	void FixedUpdate () {
 		try{
+
+            if (truecan)
+            {
+                down = -50;
+                GetComponent<Rigidbody2D>().AddForce(new Vector2(0, down));
+                truecan = false;
+            }
+
 			Vector3 pos = transform.position;
 
 

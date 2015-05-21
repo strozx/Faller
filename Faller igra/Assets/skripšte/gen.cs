@@ -12,7 +12,7 @@ public class gen : MonoBehaviour {
 			st--;
 			}
 	}
-	int st=-2;
+	int st=-20;
 	int s = 0;
 	public void spawn()
 	{				
