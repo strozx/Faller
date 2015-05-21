@@ -2,8 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class responsiveB : MonoBehaviour {
-	
-
+  
 	int hs1 =0;
     void Start()
     {
@@ -14,8 +13,8 @@ public class responsiveB : MonoBehaviour {
 	void Update()
 	{
 		if (death.smrt) {
-			
-			
+
+            replayCan.SetActive(true);
 
 			}
 			
