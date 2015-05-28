@@ -46,6 +46,8 @@ public class gen : MonoBehaviour {
 			Destroy(this.gameObject);
 						}
 }
+
+
 }
 
 
