@@ -7,6 +7,7 @@ public class PlayerM : MonoBehaviour {
 	public GameObject slika;
     public GameObject canvas;
     public static bool truecan = false;
+    public static bool touch = false;
 	// Use this for initialization
 	void Start () {
 		GetComponent<Rigidbody2D>().AddForce (new Vector2 (0, down));
@@ -50,11 +51,14 @@ public class PlayerM : MonoBehaviour {
 			pos.x = -widthOrtho + shipBoundaryRadius;
 			
 		}
-
+        if (touch)
+        {
+            
+       
 		Touch t = Input.GetTouch(0);
 		Vector3 pozicija = new Vector3( Camera.main.ScreenToWorldPoint(t.position).x, target.position.y, Camera.main.nearClipPlane);
 		target.transform.position = pozicija;
-
+        }
 		}
 		catch(UnityException)
 		{

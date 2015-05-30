@@ -14,7 +14,7 @@ public class gen : MonoBehaviour {
         st = platform.transform.position.y;
         for (int i = 0; i < 30; i++)
         {
-            for (s = 0; s < 2; s++)
+            for (s = 0; s < 1; s++)
             {
                 spawn();
             }
