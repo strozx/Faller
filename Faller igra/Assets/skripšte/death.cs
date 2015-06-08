@@ -12,22 +12,27 @@ public class death : MonoBehaviour {
 
     }
 
-    int hs1 = 0;
+    public static int hs1 = 0;
 	void OnTriggerEnter2D(Collider2D other)
 	{
+        
 		smrt = true;
 		Destroy (this.gameObject);
-
+        PlayerM.touch = false;
         replayCan.SetActiveRecursively(true);
+        if (hs1 < score.hs)
+        {
+            PlayerPrefs.SetInt("hs1", score.hs);
+        }
 	}
     void Update()
     {
       
 
-        if (hs1 > score.hs)
-        {
-            PlayerPrefs.SetInt("hs1", score.hs);
-        }
+//        if (hs1 > score.hs)
+//        {
+//            PlayerPrefs.SetInt("hs1", score.hs);
+//        }
     }
 
 

@@ -9,6 +9,7 @@ public class score : MonoBehaviour {
 	void Start () {
 		_lastPosition = this.transform.position;
 		hs = 0;
+        _firstPosition = this.transform.position;
 	}
 
 	// Update is called once per frame

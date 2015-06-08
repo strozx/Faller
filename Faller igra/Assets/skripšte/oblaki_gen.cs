@@ -5,13 +5,19 @@ public class oblaki_gen : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		for (int i = 0; i < 100; i++) {
+		for (int i = 0; i < 70; i++) {
 			for (s=0; s < 2; s++) {
 				spawnO ();
 			}
-			st--;
+			st=st-2;
 		}
 	}
+
+    public void zac()
+    {
+      
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
