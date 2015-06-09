@@ -21,14 +21,14 @@ public class changeScene : MonoBehaviour
 
     }
     
-    public void ChangeToScene(bool vrednsot)
+    public void ChangeToScene(bool vrednost)// ta funkcija se ne izvede včeri do 10:34 se je izvedla pol je pa nehal delat
     {
-        UI.SetActive(vrednsot);
+       this.UI.SetActiveRecursively(vrednost); 
         PlayerM.down = -100;
         PlayerM.truecan = true;
         score._firstPosition = this.transform.position;
         PlayerM.touch = true;
-        //zacetek();
+       
 
     }
     public void back()
@@ -41,7 +41,7 @@ public class changeScene : MonoBehaviour
     {
         UIr.SetActive(false);
         Application.LoadLevel("level");
-        
+        UI.SetActiveRecursively(false);
             zacetniM= true;
             PlayerM.touch = true;
     }

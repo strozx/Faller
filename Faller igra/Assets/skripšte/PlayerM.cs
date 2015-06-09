@@ -72,6 +72,8 @@ public class PlayerM : MonoBehaviour {
 //            touch = false;
 //				Destroy(this.gameObject);
 //        }
+
+
             }
 
 

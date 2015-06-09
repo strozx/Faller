@@ -5,10 +5,11 @@ public class pofU : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+    
 	}
 	public GameObject zoga;
 	public GameObject UIr;
+    public GameObject UI;
 	public static bool konec=false;
 	// Update is called once per frame
 	void FixedUpdate () {
